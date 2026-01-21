@@ -154,3 +154,5 @@ __pycache__/
 *.key
 apikeys.txt
 secrets.json
+/QUICK_PUBLISH.md
+/PUBLISHING.md

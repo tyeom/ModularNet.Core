@@ -2,8 +2,11 @@
 
 A NestJS-inspired modular framework for ASP.NET Core that brings declarative programming, modular architecture, and enhanced developer experience to .NET web applications.
 
+[![NuGet Version](https://img.shields.io/nuget/v/ModularNet.Core.svg)](https://www.nuget.org/packages/ModularNet.Core/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/ModularNet.Core.svg)](https://www.nuget.org/packages/ModularNet.Core/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-10.0-blue.svg)](https://dotnet.microsoft.com/)
+[![GitHub](https://img.shields.io/github/stars/tyeom/ModularNet.Core?style=social)](https://github.com/tyeom/ModularNet.Core)
 
 ## 🎯 Overview
 
@@ -15,6 +18,20 @@ ModularNet is a lightweight framework built on top of ASP.NET Core that provides
 - **Interceptors**: AOP-style cross-cutting concerns (logging, caching, authentication)
 - **Pipes**: Reusable parameter transformation and validation
 - **Reduced Boilerplate**: No need for `ControllerBase`, `IActionResult`, or verbose route definitions
+
+## 📦 Installation
+
+Install ModularNet.Core via NuGet:
+
+```bash
+dotnet add package ModularNet.Core
+```
+
+Or via Package Manager Console:
+
+```powershell
+Install-Package ModularNet.Core
+```
 
 ## 🚀 Quick Start
 
