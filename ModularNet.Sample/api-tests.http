@@ -1,0 +1,122 @@
+### ModularNet Sample API Tests
+### Use this file with VS Code REST Client extension or Visual Studio
+
+@baseUrl = http://localhost:5116
+@apiKey = secret-api-key-12345
+
+###############################################
+# Weather API (with Caching)
+###############################################
+
+### Get weather forecasts (default count)
+GET {{baseUrl}}/weather?count=5
+
+### Get weather forecasts by days
+GET {{baseUrl}}/weather/7
+
+###############################################
+# User API
+###############################################
+
+### Get user by ID
+GET {{baseUrl}}/users/123
+
+### Get users list with pagination
+GET {{baseUrl}}/users?limit=10&offset=0
+
+### Create user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "John Doe"
+}
+
+### Update user
+PUT {{baseUrl}}/users/123
+Content-Type: application/json
+
+{
+  "name": "Jane Doe"
+}
+
+### Delete user
+DELETE {{baseUrl}}/users/123
+
+###############################################
+# Product API (requires authentication)
+###############################################
+
+### Get all products (should fail without API key)
+GET {{baseUrl}}/products
+
+### Get all products (with authentication)
+GET {{baseUrl}}/products
+X-API-Key: {{apiKey}}
+
+### Get product by ID (with authentication)
+GET {{baseUrl}}/products/1
+X-API-Key: {{apiKey}}
+
+### Create product (should fail - validation error)
+POST {{baseUrl}}/products
+X-API-Key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "name": "AB",
+  "description": "Too short name",
+  "price": -10,
+  "stock": 5
+}
+
+### Create product (valid data)
+POST {{baseUrl}}/products
+X-API-Key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "name": "Gaming Monitor",
+  "description": "27-inch 144Hz gaming monitor with HDR support",
+  "price": 399.99,
+  "stock": 15
+}
+
+### Update product
+PUT {{baseUrl}}/products/1
+X-API-Key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "price": 1199.99,
+  "stock": 8
+}
+
+### Delete product
+DELETE {{baseUrl}}/products/1
+X-API-Key: {{apiKey}}
+
+###############################################
+# Error Handling Tests
+###############################################
+
+### Test 404 - Product not found
+GET {{baseUrl}}/products/999
+X-API-Key: {{apiKey}}
+
+### Test 401 - Unauthorized
+GET {{baseUrl}}/products
+
+### Test 401 - Invalid API key
+GET {{baseUrl}}/products
+X-API-Key: invalid-key
+
+### Test 400 - Validation error
+POST {{baseUrl}}/products
+X-API-Key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "name": "A",
+  "price": 0
+}

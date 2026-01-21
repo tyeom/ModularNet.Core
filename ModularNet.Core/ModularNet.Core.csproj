@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>ModularNet.Core</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Banaple75</Authors>
+    <Company>ModularNet</Company>
+    <Product>ModularNet</Product>
+    <Description>A NestJS-inspired modular framework for ASP.NET Core that brings declarative programming, modular architecture, and enhanced developer experience to .NET web applications.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Banaple75/ModularNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Banaple75/ModularNet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>aspnetcore;nestjs;modular;framework;dependency-injection;interceptor;pipe;aop</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release of ModularNet - NestJS-inspired modular framework for ASP.NET Core</PackageReleaseNotes>
+    <Copyright>Copyright (c) 2025 Banaple75</Copyright>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Banaple75\source\repos\ModularNet\ModularNet.Core\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Banaple75\source\repos\ModularNet\ModularNet.Core\.editorconfig" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>

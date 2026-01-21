@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ModularNet.Core/ModularNet.Core.csproj" />
+  <Project Path="ModularNet.Sample/ModularNet.Sample.csproj" />
+</Solution>
