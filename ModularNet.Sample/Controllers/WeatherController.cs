@@ -1,6 +1,7 @@
 using ModularNet.Core.Attributes;
 using ModularNet.Core.Pipes;
 using ModularNet.Sample.Interceptors;
+using ModularNet.Sample.Models;
 using ModularNet.Sample.Services;
 
 namespace ModularNet.Sample.Controllers;

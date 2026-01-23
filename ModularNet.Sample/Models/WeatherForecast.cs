@@ -1,4 +1,4 @@
-namespace ModularNet.Sample
+namespace ModularNet.Sample.Models
 {
     public class WeatherForecast
     {
